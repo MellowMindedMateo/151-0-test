@@ -501,7 +501,6 @@ export default function App(){
       const res=battle(team,gyms[i],rng);
       log.push({gym:gyms[i],...res});setBattleLog([...log]);
       if(res.win)w++;else l++;
-      if(l>=2)break;
     }
     setRecord({w,l});setWon(l===0);
     if(daily){localStorage.setItem(dKey(),"1");setDailyDone(true);}
